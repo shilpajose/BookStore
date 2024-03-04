@@ -60,7 +60,6 @@ function AllBooks() {
         }
       </Row>
       <div>
-        <BookHistory displayBooks={allBooks}/>
       </div>
     </div>
   )

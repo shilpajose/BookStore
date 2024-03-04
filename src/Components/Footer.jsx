@@ -40,7 +40,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <p className='text-center' style={{color:'wheat'}}>Copy Right &copy; 2024 Media Player.Built with reactJS</p>
+            <p className='text-center' style={{color:'wheat'}}>Copy Right &copy; 2024.Built with reactJS</p>
         </div>
     )
 }
