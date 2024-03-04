@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import { addBookAPI } from '../Serveices/AllApis';
 import AllBooks from '../Pages/AllBooks';
 
-function AddBook() {
+function AddBook({setAddBookResponse}) {
     // Add book 
     const [addBookDetails, setAddBookDetails] = useState({
         bookname: "", authorname: "", publishername: "", image: "", price: ""
@@ -43,6 +43,7 @@ function AddBook() {
             const result = await addBookAPI(addBookDetails)
             if (result.status >= 200 && result.status <= 300) {
                 alert(`${bookname} added successfully`)
+                setAddBookResponse(result.data)
                 handleClose()
                 getBooks()
             } else {

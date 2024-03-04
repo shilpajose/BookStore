@@ -7,7 +7,7 @@ import { getAllBooksAPI } from '../Serveices/AllApis';
 import BookHistory from './BookHistory';
 import TableOfBookData from '../Components/TableOfBookData';
 
-function AllBooks() {
+function AllBooks({addBookResponse}) {
   // state for get all books
   const [allBooks, setAllBooks] = useState([])
 
@@ -19,7 +19,7 @@ function AllBooks() {
 
   useEffect(() => {
     getBooks()
-  }, [])
+  }, [addBookResponse])
 
   // alert buy message
   const handleBuy=()=>{
@@ -28,7 +28,6 @@ function AllBooks() {
 
   return (
     <div>
-      <AddBook />
       {/* display all books */}
       <h3 className='text-danger text-center mt-5'>AllBooks</h3>
       <Row>
